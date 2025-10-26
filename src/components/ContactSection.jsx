@@ -4,13 +4,16 @@ import {
   Mail,
   MapPin,
   Phone,
+  Github,
   Send,
+  MessageCircleMore,
   Twitch,
   Twitter,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const ContactSection = () => {
   const { toast } = useToast();
@@ -59,7 +62,7 @@ export const ContactSection = () => {
                     href="mailto:hello@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    hello@gmail.com
+                    naufalnajwanabdurrafi@gmail.com
                   </a>
                 </div>
               </div>
@@ -73,7 +76,7 @@ export const ContactSection = () => {
                     href="tel:+11234567890"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +1 (123) 456-7890
+                    +62 813 5295 2897
                   </a>
                 </div>
               </div>
@@ -84,7 +87,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Location</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Vancouver, BC, Canada
+                    Banjarmasin, Kalimantan Selatan, Indonesia
                   </a>
                 </div>
               </div>
@@ -93,17 +96,33 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/naufal-najwan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank">
-                  <Twitter />
+                <a
+                  href="https://wa.me/6287823329130"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircleMore />
                 </a>
-                <a href="#" target="_blank">
+                <a
+                  href="https://instagram.com/naufalnjwn_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Instagram />
                 </a>
-                <a href="#" target="_blank">
-                  <Twitch />
+                <a
+                  href="https://github.com/Wanafi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github />
                 </a>
               </div>
             </div>

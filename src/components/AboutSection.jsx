@@ -16,9 +16,7 @@ export const AboutSection = () => {
             </h3>
 
             <p className="text-muted-foreground">
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
+              I am a fresh graduate, I specialize in creating responsive, accessible, and high-performance web applications using modern technologies.
             </p>
 
             <p className="text-muted-foreground">
