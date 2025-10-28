@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     title: "Tools Degree Information System (SIGELAT)",
     description: "A system that monitors the movement of equipment in each car during equipment display activities.",
-    image: "/projects/projects1.png",
+    image: "./projects/projects1.png",
     tags: ["Laravel", "PHP", "MySql"],
     demoUrl: "#",
     githubUrl: "https://github.com/Wanafi/Sigelat-new.git", 
@@ -15,7 +15,7 @@ const projects = [
     title: "Orderly Receipt of Honorarium (TITIR)",
     description:
       "A system that controls the receipt of ASN honorariums at the South Kalimantan Regional Civil Service Agency.",
-    image: "/projects/projects2.png",
+    image: "./projects/projects2.png",
     tags: ["Laravel", "PHP", "Bootstrap"],
     demoUrl: "#",
     githubUrl: "https://github.com/akuiki1/leviathan.git",
@@ -25,7 +25,7 @@ const projects = [
     title: "Burger Website Landing Page",
     description:
       "A landing page for burger-selling MSMEs in the Banjarmasin area",
-    image: "/projects/projects3.png",
+    image: "./projects/projects3.png",
     tags: ["HTML", "CSS", "JavaScript"],
     demoUrl: "#",
     githubUrl: "#",
