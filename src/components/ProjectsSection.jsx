@@ -22,11 +22,11 @@ const projects = [
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Burger Website Landing Page",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+      "A landing page for burger-selling MSMEs in the Banjarmasin area",
+    image: "/projects/projects3.png",
+    tags: ["HTML", "CSS", "JavaScript"],
     demoUrl: "#",
     githubUrl: "#",
   },
