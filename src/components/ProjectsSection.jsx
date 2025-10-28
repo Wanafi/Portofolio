@@ -1,11 +1,16 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
+const getImagePath = (filename) => {
+  const base = import.meta.env.BASE_URL || '/';
+  return `${base}projects/${filename}`;
+};
+
 const projects = [
   {
     id: 1,
     title: "Tools Degree Information System (SIGELAT)",
     description: "A system that monitors the movement of equipment in each car during equipment display activities.",
-    image: "./projects/projects1.png",
+    image: "projects1.png",
     tags: ["Laravel", "PHP", "MySql"],
     demoUrl: "#",
     githubUrl: "https://github.com/Wanafi/Sigelat-new.git", 
@@ -37,7 +42,6 @@ export const ProjectsSection = () => {
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          {" "}
           Featured <span className="text-primary"> Projects </span>
         </h2>
 
@@ -52,24 +56,31 @@ export const ProjectsSection = () => {
               key={key}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-48 overflow-hidden bg-secondary/30 flex items-center justify-center">
                 <img
-                  src={project.image}
+                  src={getImagePath(project.image)}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onError={(e) => {
+                    console.error('Failed to load image:', e.target.src);
+                    e.target.onerror = null;
+                    e.target.style.display = 'none';
+                    e.target.parentElement.innerHTML += '<div class="flex items-center justify-center w-full h-full text-muted-foreground"><span>Image Not Available</span></div>';
+                  }}
+                  loading="lazy"
                 />
               </div>
 
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                  {project.tags.map((tag, index) => (
+                    <span key={index} className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
@@ -78,14 +89,18 @@ export const ProjectsSection = () => {
                     <a
                       href={project.demoUrl}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      aria-label={`View ${project.title} demo`}
                     >
                       <ExternalLink size={20} />
                     </a>
                     <a
                       href={project.githubUrl}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      aria-label={`View ${project.title} on GitHub`}
                     >
                       <Github size={20} />
                     </a>
