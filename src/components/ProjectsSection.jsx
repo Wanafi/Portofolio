@@ -3,22 +3,22 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
+    title: "Tools Degree Information System (SIGELAT)",
+    description: "A system that monitors the movement of equipment in each car during equipment display activities.",
+    image: "/projects/projects1.png",
+    tags: ["Laravel", "PHP", "MySql"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Wanafi/Sigelat-new.git", 
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Orderly Receipt of Honorarium (TITIR)",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+      "A system that controls the receipt of ASN honorariums at the South Kalimantan Regional Civil Service Agency.",
+    image: "/projects/projects2.png",
+    tags: ["Laravel", "PHP", "Bootstrap"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/akuiki1/leviathan.git",
   },
   {
     id: 3,
