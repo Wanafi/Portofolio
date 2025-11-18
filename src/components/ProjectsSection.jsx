@@ -29,8 +29,8 @@ const projects = [
     id: 3,
     title: "Burger Website Landing Page",
     description:
-      "A landing page for burger-selling MSMEs in the Banjarmasin area",
-    image: "./projects/projects3.png",
+      "A landing page for burger-selling MSMEs in the Banjarmasin area.",
+    image: "/projects/projects3.png",
     tags: ["HTML", "CSS", "JavaScript"],
     demoUrl: "#",
     githubUrl: "#",
