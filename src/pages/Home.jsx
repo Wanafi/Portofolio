@@ -7,6 +7,7 @@ import { SkillsSection } from "../components/SkillsSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 export const Home = () => {
   return (
@@ -29,6 +30,9 @@ export const Home = () => {
 
       {/* Footer */}
       <Footer />
+      
+      {/* Toast Notifications */}
+      <Toaster />
     </div>
   );
 };

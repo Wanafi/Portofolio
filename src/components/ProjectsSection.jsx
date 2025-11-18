@@ -1,10 +1,5 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
-const getImagePath = (filename) => {
-  const base = import.meta.env.BASE_URL || '/';
-  return `${base}projects/${filename}`;
-};
-
 const projects = [
   {
     id: 1,
@@ -20,7 +15,7 @@ const projects = [
     title: "Orderly Receipt of Honorarium (TITIR)",
     description:
       "A system that controls the receipt of ASN honorariums at the South Kalimantan Regional Civil Service Agency.",
-    image: "./projects/projects2.png",
+    image: "projects2.png",
     tags: ["Laravel", "PHP", "Bootstrap"],
     demoUrl: "#",
     githubUrl: "https://github.com/akuiki1/leviathan.git",
@@ -30,7 +25,7 @@ const projects = [
     title: "Burger Website Landing Page",
     description:
       "A landing page for burger-selling MSMEs in the Banjarmasin area.",
-    image: "/projects/projects3.png",
+    image: "projects3.png",
     tags: ["HTML", "CSS", "JavaScript"],
     demoUrl: "#",
     githubUrl: "#",
@@ -38,6 +33,11 @@ const projects = [
 ];
 
 export const ProjectsSection = () => {
+  const getImagePath = (filename) => {
+    const base = import.meta.env.BASE_URL || '/';
+    return `${base}projects/${filename}`;
+  };
+
   return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
@@ -51,9 +51,9 @@ export const ProjectsSection = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+          {projects.map((project) => (
             <div
-              key={key}
+              key={project.id}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <div className="h-48 overflow-hidden bg-secondary/30 flex items-center justify-center">
